@@ -168,7 +168,7 @@ public class AluguelService {
             System.out.println("Nenhum aluguel registrado.");
             return;
         }
-        System.out.println("Aluguéis registrados:");
+        System.out.println("Aluguéis que estão registrados:");
         alugueis.forEach(System.out::println);
     }
 
