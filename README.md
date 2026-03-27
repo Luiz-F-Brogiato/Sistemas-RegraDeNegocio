@@ -1,22 +1,9 @@
-# Sistema de Controle de Aluguel de Quadra Esportiva
+# Este repositório irá agregar 3 projetos. 
 
-## Descrição Geral
-Sistema desenvolvido em Java para gerenciar aluguel de quadras esportivas com suporte a múltiplos clientes, horários e reservas com validações de regras de negócio.
+# Todos possuem:
 
-## Estrutura do Projeto
+## Modelo MVC
+## Documento de requisitos
+# Estruturação clara e objetiva
 
-### Arquitetura MVC
-```
-src/main/java/
-├── EstruturacaoDeSistemas/
-│   └── Main.java                 # Interface com usuário
-├── model/
-│   ├── Cliente.java             # Entidade Cliente
-│   ├── Horario.java             # Entidade Horário
-│   └── Aluguel.java             # Entidade Aluguel
-├── controller/
-│   └── AluguelController.java    # Controlador
-└── service/
-    └── AluguelService.java       # Lógica de negócio
-```
-
+- O objetivo é praticar regra de neǵocio e o modelo MVC (model, view controler) no JAVA.
