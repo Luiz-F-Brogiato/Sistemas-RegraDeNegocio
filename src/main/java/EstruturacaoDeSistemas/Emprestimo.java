@@ -2,9 +2,6 @@ package EstruturacaoDeSistemas;
 
 import java.time.LocalDate;
 
-/**
- * Entidade que representa um Empréstimo de livro
- */
 public class Emprestimo {
     private int id;
     private Aluno aluno;
@@ -12,14 +9,8 @@ public class Emprestimo {
     private LocalDate dataEmprestimo;
     private LocalDate dataDevolucao;
 
-    // Contador estático para gerar IDs únicos
     private static int proximoId = 1;
 
-    /**
-     * Construtor do Empréstimo
-     * @param aluno Aluno que está pegando emprestado
-     * @param livro Livro sendo emprestado
-     */
     public Emprestimo(Aluno aluno, Livro livro) {
         if (aluno == null || livro == null) {
             throw new IllegalArgumentException("Aluno e Livro não podem ser nulos!");
@@ -29,10 +20,9 @@ public class Emprestimo {
         this.aluno = aluno;
         this.livro = livro;
         this.dataEmprestimo = LocalDate.now();
-        this.dataDevolucao = null; // Ainda não foi devolvido
+        this.dataDevolucao = null;
     }
 
-    // Getters
     public int getId() {
         return id;
     }
@@ -53,9 +43,6 @@ public class Emprestimo {
         return dataDevolucao;
     }
 
-    /**
-     * Registra a devolução do livro
-     */
     public void registrarDevolucao() {
         if (dataDevolucao != null) {
             throw new IllegalStateException("Este empréstimo já foi devolvido!");
@@ -63,10 +50,6 @@ public class Emprestimo {
         this.dataDevolucao = LocalDate.now();
     }
 
-    /**
-     * Verifica se o empréstimo está aberto (não foi devolvido)
-     * @return true se o empréstimo está aberto
-     */
     public boolean estaAberto() {
         return dataDevolucao == null;
     }
@@ -82,4 +65,3 @@ public class Emprestimo {
                 '}';
     }
 }
-
